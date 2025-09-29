@@ -2,46 +2,39 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 시작하기
 
-Let's discover **Docusaurus in less than 5 minutes**.
 
-## Getting Started
+## 스마트 육묘장 시스템 소개
 
-Get started by **creating a new site**.
+본 문서에서는 스마트 육묘장 시스템의 개발 및 운영에 대한 정보를 제공합니다. 이 시스템은 IoT 기술을 활용하여 육묘장의 환경을 모니터링하고 제어하는 것을 목표로 하며, 육묘장 내에서 AGV와 로봇팔을 활용한 랙 이송 및 자동화된 작업을 지원합니다. 
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+# 시스템 구성
+시스템은 다음과 같은 주요 구성 요소로 이루어져 있습니다:
+- AGV : 마그네틱 라인 및 RFID 태그를 사용하여 육묘장 내 물자를 이송합니다. 
+  - AGV 본체
+  - 충전 스테이션
+  - RFID 리더 
+- 로봇팔 : 육묘장 내에서 파종기에 의해 파종이 완료된 모판을 랙에 적재합니다. 
+  - 로봇팔 본체
+  - 외부 연동용 보드
+- 스마트랙 : 이미지, 온도, 습도 정보를 수집하며, 모판의 성장 환경을 모니터링합니다. 
+  - 스마트랙 본체
+  - 이미지 카메라
+  - 온도/습도 센서
+  - 외부 연동용 보드
 
-### What you'll need
+## 동작 전원 환경
+ - AGV : 220V AC 전원을 통한 충전 및 자체 Li-ion 배터리 
+ - 로봇팔 : 220V AC 상시전원
+ - 스마트랙 : 220V AC 전원
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+ ## 네트워크 환경
+스마트 육묘장 내 모든 장비는 WiFi 6 Mesh 네트워크를 통해 연결됩니다.
+> AP : SID_Mesh
+> 서브넷 : 192.168.11.0/24
+> 게이트웨이 : 192.168.11.1
 
-## Generate a new site
+---
+각 장비의 세부적인 설정 및 운영 방법은 후술된 문서에서 확인할 수 있습니다.
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

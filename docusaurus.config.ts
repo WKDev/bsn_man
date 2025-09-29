@@ -5,12 +5,12 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: '스마트 육묘장 시스템',
+  tagline: '스마트 육묘장 시스템 사용자 매뉴얼',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://wkdev.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/bsn_man/',
@@ -37,8 +37,13 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-      },
-        
+          path: 'docs',
+          
+          routeBasePath: '/',
+        },
+
+        blog: false,
+
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -50,7 +55,7 @@ const config: Config = {
     // Replace with your project's social card
     // image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'bsn',
+      title: '스마트 육묘장 시스템',
       // logo: {
       //   alt: 'My Site Logo',
       //   src: 'img/logo.svg',
